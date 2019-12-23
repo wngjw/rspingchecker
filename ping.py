@@ -19,7 +19,7 @@ class Ping:
             return float(avg)
         elif self.platform == 'Windows':
             avg = results.split('Average = ')
-            return float(avg[:-2])
+            return float(avg[1][:-2])
 
     def send(self):
         cmd = subprocess.run(
